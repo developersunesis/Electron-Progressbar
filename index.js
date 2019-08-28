@@ -11,7 +11,7 @@ module.exports = function (config) {
     const obj = {};
 
     //check if a document or html file is present
-    if(document != null && document != undefined){
+    if(document != undefined){
         /*
         *   Define and initialise the progressbar types
         *   D -> determinate progress
