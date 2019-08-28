@@ -15,6 +15,8 @@ module.exports = function (config) {
         config.progressBackground = "blue";
         config.type = type1;
         config.speed = 2;
+        config.maxBarWidth = 20;
+        config.barHeight = 3;
 
     } else {
         if(config.baseBackground == null) config.baseBackground = "#00000000";
@@ -23,8 +25,11 @@ module.exports = function (config) {
 
         if(config.type == null) config.type = type1;
 
-        if(config.speed == null) config.speed = 2;
+        if(config.speed == null) config.speed = 3;
 
+        if(config.maxBarWidth != null) Imax = config.maxBarWidth;
+
+        if(config.barHeight == null) config.barHeight = 5;
     }
 
     const obj = {};
@@ -36,14 +41,21 @@ module.exports = function (config) {
     let div = document.createElement("div");
     let progress = document.createElement("div");
 
+    const type = config.type;
+    const speed = config.speed;
+    const barHeight = config.barHeight;
+    let innerProgress = 0;
+    let end = false;
+    let progressLevel = 0;
+
     div.style.width = "100%";
-    div.style.height = "2px";
+    div.style.height = barHeight+"px";
     div.style.background = config.baseBackground;
     div.style.position = "absolute";
     div.style.top = 0;
 
     progress.style.width = "0%";
-    progress.style.height = "2px";
+    progress.style.height = barHeight+"px";
     progress.style.background = config.progressBackground;
     progress.style.position = "absolute";
     progress.style.top = 0;
@@ -54,12 +66,6 @@ module.exports = function (config) {
     
     body.style.margin = "0px";
     body.appendChild(div);
-
-    const type = config.type;
-    const speed = config.speed;
-    let innerProgress = 0;
-    let end = false;
-    let progressLevel = 0;
 
     obj.setProgress = (progressLevel) => {
 
