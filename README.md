@@ -8,6 +8,9 @@ npm i electronjs-progressbar
 or visit https://www.npmjs.com/package/electronjs-progressbar
 
 # Configuration
+`container`      :     `color (default: body)` (This defines the container you want the progressbar)
+<br/>
+<br/>
 `baseBackground`      :     `color (default: transparent)` (This defines the background color of the parent element of the progressbar)
 <br/>
 <br/>
