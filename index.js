@@ -5,6 +5,7 @@ module.exports = function (config) {
     const type2 = "I";
     
     let Imax = 20;
+    const customCSS = "";
 
     if(config == null){
         config = {};
@@ -30,10 +31,15 @@ module.exports = function (config) {
         if(config.maxBarWidth != null) Imax = config.maxBarWidth;
 
         if(config.barHeight == null) config.barHeight = 5;
+
+        if(config.customCSS != null) customCSS = config.customCSS;
     }
 
     const obj = {};
 
+    obj.LOADING = "L";
+    obj.COMPLETED = "C";
+    
     if(obj.status == null)
         obj.status = "L";
 
@@ -61,6 +67,9 @@ module.exports = function (config) {
     progress.style.top = 0;
     progress.style.left = "0%";
     progress.id = "progressbar";
+    
+    if(customCSS != "")
+        progress.style.cssText = customCSS;
 
     div.appendChild(progress);
     
