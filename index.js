@@ -68,8 +68,10 @@ module.exports = function (config) {
     progress.style.left = "0%";
     progress.id = "progressbar";
     
-    if(customCSS != "")
+    if(customCSS != ""){
+        customCSS += progress.style.cssText;
         progress.style.cssText = customCSS;
+    }
 
     div.appendChild(progress);
     
