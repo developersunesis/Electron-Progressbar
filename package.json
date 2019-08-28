@@ -1,6 +1,6 @@
 {
   "name": "electronjs-progressbar",
-  "version": "0.2.0",
+  "version": "0.1.1",
   "description": "A module to add progress bar to electronjs window",
   "main": "index.js",
   "scripts": {

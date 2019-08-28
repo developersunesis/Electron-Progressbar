@@ -47,8 +47,10 @@ or visit https://www.npmjs.com/package/electronjs-progressbar
 
     //initialize progressbar
     const config = {
-
-          }
+            progressBackground: "blue",
+            type: "D",
+            speed: 5
+          };
           
     var progressbar = createProgressBar({
           config
