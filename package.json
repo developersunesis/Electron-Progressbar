@@ -1,0 +1,29 @@
+{
+  "name": "electron-progressbar",
+  "version": "1.0.0",
+  "description": "A module to add progress bar to electronjs window",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/developersunesis/Electron-Progressbar.git"
+  },
+  "keywords": [
+    "electronjs",
+    "electron",
+    "progressbar",
+    "progressbar"
+  ],
+  "author": "Uche Emmanuel <developersunesis@gmail.com> (https://developersunesis.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/developersunesis/Electron-Progressbar/issues"
+  },
+  "homepage": "https://github.com/developersunesis/Electron-Progressbar#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0"
+  }
+}
