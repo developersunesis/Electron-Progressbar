@@ -41,7 +41,7 @@ or visit https://www.npmjs.com/package/electronjs-progressbar
 `progressbar.progressBarID`       `Gets progressbar's id usually "electronjsprogressbar"`
 
 # Usage
-
+```javascript
     //import the library
     const createProgressBar = require('electronjs-progressbar');
 
@@ -75,3 +75,4 @@ or visit https://www.npmjs.com/package/electronjs-progressbar
     }, 3000);
 
 
+```
